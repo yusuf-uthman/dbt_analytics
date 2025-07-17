@@ -22,7 +22,7 @@ version: 2
 
 sources:
   - name: restaurant
-    database: retail_shop
+    database: raw_BUSINESS_data
     schema: restaurant
     tables:
       - name: customers
