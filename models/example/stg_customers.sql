@@ -4,4 +4,6 @@ src as (
         * 
     from {{source('restaurant', 'customers')}}
 )
-select * from src
+select 
+    index, first_name,  last_name, company, city, country
+from src
