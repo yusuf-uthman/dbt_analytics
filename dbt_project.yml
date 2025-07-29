@@ -39,4 +39,10 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
+      +materialized: view
+    bronze:
+      +materialized: table
+    silver:
+      +materialized: table
+    gold:
       +materialized: table
