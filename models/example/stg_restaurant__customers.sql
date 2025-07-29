@@ -17,13 +17,12 @@ renamed as (
         city,
         country,
         phone_1,
-        phone_2,
+        phone_2 as alternative_phone,
         email,
         subscription_date,
         website
 
     from source
-
 )
 
 select * from renamed
