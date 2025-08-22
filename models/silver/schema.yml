@@ -1,7 +1,0 @@
-version: 2
-sources:
-  - name: restaurant
-    database: raw_BUSINESS_data
-    schema: restaurant
-    tables:
-      - name: customers
