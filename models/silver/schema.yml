@@ -1,13 +1,5 @@
 version: 2
 sources:
-  - name: RAW_GROU_3_DBT_CLASS
-    database: raw_BUSINESS_data
-    schema: RAW_GROU_3_DBT_CLASS
-    tables:
-      - name: ACTIVITIES
-      - name: OPPORTUNITIES
-      - name: PERFORMANCE
-      - name: SALES_REPS
   - name: restaurant
     database: raw_BUSINESS_data
     schema: restaurant
