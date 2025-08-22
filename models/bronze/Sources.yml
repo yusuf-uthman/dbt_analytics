@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: bronze_sales_reps
+    description: Bronze layer model for sales reps
+    columns:
+      - name: rep_id
+        tests:
+          - unique
+
+      - name: rep_name
+        tests:
+          - not_null
+
+      
+
