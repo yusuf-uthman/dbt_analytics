@@ -8,5 +8,8 @@ source as (
     from {{ source('RAW_GROUP_3_DBT_CLASS', 'ACTIVITIES') }}
 
 )  
-select distinct(activity_id) from source
- where opportunity_id is null
+
+select activity_id, opportunity_id, rep_id, activity_type, duration_minutes, outcome, business from source
+ 
+
+ 
