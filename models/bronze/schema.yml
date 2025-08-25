@@ -1,0 +1,9 @@
+models:
+  - name: bronze_activities.sql
+    columns:
+      - name: activity_id
+        tests:
+          - unique # Ensures all values in my_column_id are unique
+      - name: opportunity_id
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
