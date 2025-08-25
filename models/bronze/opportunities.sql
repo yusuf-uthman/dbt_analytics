@@ -8,6 +8,7 @@ with source as (
     PRODUCT_TYPE,
     OPPORTUNITY_VALUE,
     OPPORTUNITY_ID,
+    STAGE,
     'group_3_sales' as business  
  from {{ source('RAW_GROUP_3_DBT_CLASS', 'OPPORTUNITIES') }}
 )
@@ -18,5 +19,6 @@ select
     PRODUCT_TYPE,
     OPPORTUNITY_VALUE,
     OPPORTUNITY_ID,
+    STAGE,
     business
 from source
