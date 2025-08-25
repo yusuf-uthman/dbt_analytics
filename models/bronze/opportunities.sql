@@ -1,10 +1,22 @@
-with 
+{{ config(materialized='table') }}
 
-source as (
-
-    select * from {{ source('RAW_GROUP_3_DBT_CLASS', 'OPPORTUNITIES') }}
-
-)  
-select STAGE,REP_ID,PRODUCT_TYPE,OPPORTUNITY_VALUE
-,OPPORTUNITY_ID from source
-
+with source as (
+  select
+    REP_ID,
+    ACCOUNT_NAME,
+    CLOSE_DATE,
+    PRODUCT_TYPE,
+    OPPORTUNITY_VALUE,
+    OPPORTUNITY_ID,
+    'group_3_sales' as business  
+ from {{ source('RAW_GROUP_3_DBT_CLASS', 'OPPORTUNITIES') }}
+)
+select
+    REP_ID,
+    ACCOUNT_NAME,
+    CLOSE_DATE,
+    PRODUCT_TYPE,
+    OPPORTUNITY_VALUE,
+    OPPORTUNITY_ID,
+    business
+from source
