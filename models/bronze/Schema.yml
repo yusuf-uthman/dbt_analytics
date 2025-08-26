@@ -6,11 +6,19 @@ models:
     columns:
       - name: rep_id
         tests:
-          - unique
-
-      - name: rep_name
-        tests:
+          - unique  # Ensures all values in my_column_id are unique
           - not_null
+      - name: first_name
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
+      - name: last_name
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
+
+          
+
+
+
 
       
 
