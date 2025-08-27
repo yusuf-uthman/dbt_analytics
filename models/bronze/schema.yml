@@ -16,9 +16,9 @@ models:
           - not_null
       - name: first_name
         tests:
-          - not_null # Ensures my_column_id does not contain null values
+          - not_null # Ensures first_name does not contain null values
       - name: last_name
         tests:
-          - not_null # Ensures my_column_id does not contain null values
+          - not_null # Ensures last_name does not contain null values
 
                     
