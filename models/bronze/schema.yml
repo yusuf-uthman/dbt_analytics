@@ -1,16 +1,9 @@
-version: 2
-sources:
-  - name: RAW_GROU_3_DBT_CLASS
-    database: raw_BUSINESS_data
-    schema: RAW_GROU_3_DBT_CLASS
-    tables:
-      - name: ACTIVITIES
-      - name: OPPORTUNITIES
-      - name: PERFORMANCE
-      - name: SALES_REPS
-  - name: restaurant
-    database: raw_BUSINESS_data
-    schema: restaurant
-    tables:
-      - name: customers
-
+models:
+  - name: bronze_activities.sql
+    columns:
+      - name: activity_id
+        tests:
+          - unique # Ensures all values in my_column_id are unique
+      - name: opportunity_id
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
