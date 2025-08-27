@@ -1,5 +1,5 @@
 models:
-  - name: bronze_activities.sql
+  - name: bronze_activities
     columns:
       - name: activity_id
         tests:
@@ -7,3 +7,18 @@ models:
       - name: opportunity_id
         tests:
           - not_null # Ensures my_column_id does not contain null values
+  - name: bronze_sales_reps
+    description: Bronze layer model for sales reps
+    columns:
+      - name: rep_id
+        tests:
+          - unique  # Ensures all values in my_column_id are unique
+          - not_null
+      - name: first_name
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
+      - name: last_name
+        tests:
+          - not_null # Ensures my_column_id does not contain null values
+
+                    
