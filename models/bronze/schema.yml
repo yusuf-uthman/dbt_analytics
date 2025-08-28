@@ -1,24 +1,55 @@
 models:
   - name: bronze_activities
+    description: "raw activities data"
     columns:
       - name: activity_id
         tests:
-          - unique # Ensures all values in my_column_id are unique
+          - unique
+      - name: activity_type
+        tests:
+          - not_null
+      - name: outcome
+        tests:
+          - not_null
+
+  - name: bronze_opportunity
+    description: "raw opportunity data"
+    columns:
       - name: opportunity_id
         tests:
-          - not_null # Ensures my_column_id does not contain null values
+          - unique
+      - name: account_name
+        tests:
+          - not_null
+      - name: product_type
+        tests:
+          - not_null
+      - name: stage
+        tests:
+          - not_null
+      - name: opportunity_value
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "opportunity_value > 0"
+
   - name: bronze_sales_reps
-    description: Bronze layer model for sales reps
+    description: "raw sales reps data"
     columns:
       - name: rep_id
         tests:
-          - unique  # Ensures all values in my_column_id are unique
-          - not_null
+          - unique
       - name: first_name
         tests:
-          - not_null # Ensures first_name does not contain null values
+          - not_null
       - name: last_name
         tests:
-          - not_null # Ensures last_name does not contain null values
+          - not_null
+      - name: quota
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "quota > 0"
+
 
                     

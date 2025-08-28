@@ -1,0 +1,32 @@
+models:
+  - name: silver_activities
+    description: "cleaned activities data"
+    columns:
+      - name: outcome
+        tests:
+          - accepted_values:
+              values: ['not interested','successful','follow up needed','no response']
+      - name: activity_type
+        tests:
+          - accepted_values:
+              values: ['proposal','meeting','email','demo','call']
+
+  - name: silver_opportunity
+    description: "cleaned opportunity data"
+    columns:
+      - name: product_type
+        tests:
+          - accepted_values:
+              values: ['hardware','services','consulting','software']
+      - name: stage
+        tests:
+          - accepted_values:
+              values: ['prospecting','closed won','closed lost','proposal','qualification']
+
+  - name: silver_sales_reps
+    description: "cleaned sales reps data"
+    columns:
+      - name: region
+        tests:
+          - accepted_values:
+              values: ['west','central','south','north','east']

@@ -1,0 +1,12 @@
+models:
+  - name: gold_activities
+    description: "business-ready activities data"
+    tests: []
+
+  - name: gold_opportunity
+    description: "business-ready opportunity data"
+    tests: []
+
+  - name: gold_sales_reps
+    description: "business-ready sales reps data"
+    tests: []
