@@ -25,5 +25,5 @@ select
     op_close_month,
     op_close_day,
     cleaned_product_type,
-    cleaned_business
+    cleaned_business,
 from silver_opportunities
