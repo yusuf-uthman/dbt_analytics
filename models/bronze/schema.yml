@@ -12,8 +12,8 @@ models:
         tests:
           - not_null
 
-  - name: bronze_opportunity
-    description: "raw opportunity data"
+  - name: bronze_opportunities
+    description: "raw opportunities data"
     columns:
       - name: opportunity_id
         tests:

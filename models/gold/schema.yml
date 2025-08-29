@@ -3,7 +3,7 @@ models:
     description: "business-ready activities data"
     tests: []
 
-  - name: gold_opportunity
+  - name: gold_opportunities
     description: "business-ready opportunity data"
     tests: []
 
