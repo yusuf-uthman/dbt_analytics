@@ -1,7 +1,7 @@
 with
     silver_sales_reps as (
         select
-            cast(rep_id as int) as rep_id,  -- Convert ID to int data type
+            cast(rep_id as int) as REP_ID,  -- Convert ID to int data type
             upper(first_name) AS FIRST_NAME, -- Text fields to uppercase
             upper(last_name) AS LAST_NAME,
             upper(region) AS REGION,
