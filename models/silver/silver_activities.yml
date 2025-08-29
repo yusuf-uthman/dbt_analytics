@@ -1,0 +1,12 @@
+version: 002
+models:
+  - name: silver_activities
+    columns:
+      - name: activity_id
+        tests: [not_null]
+      - name: rep_id
+        tests: [not_null]
+      - name: opportunity_id
+        tests: [not_null]
+      - name: duration_minutes
+        tests: [not_null]
