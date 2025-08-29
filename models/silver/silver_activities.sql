@@ -1,10 +1,11 @@
 {{config (materialized= 'table')}}
+
  with source as (
     select * from {{ref('bronze_activities')}}
  )
 
- select *
- replace (
+ select 
+  
  --integer for all id columns--
        cast ( activity_id       as int)  as activity_id,
         cast (rep_id            as int)  as rep_id,
@@ -13,8 +14,8 @@
         --upercase for text columns---
         upper (outcome)                 as outcome,
         upper (activity_type)           as activity_type,
-        upper (business)                as business
- ),
+        upper (business)                as business,
+ 
         --column to keep--
        --- business,---
         --- New column for duration hours---
