@@ -1,5 +1,5 @@
 models:
-  - name: silver_activities
+  - name: SILVER_ACTIVITIES
     description: "cleaned activities data"
     columns:
       - name: outcome
@@ -11,7 +11,7 @@ models:
           - accepted_values:
               values: ['proposal','meeting','email','demo','call']
 
-  - name: silver_opportunities
+  - name: SILVER_OPPORTUNITIES
     description: "cleaned opportunities data"
     columns:
       - name: product_type
@@ -23,7 +23,7 @@ models:
           - accepted_values:
               values: ['prospecting','closed won','closed lost','proposal','qualification']
 
-  - name: silver_sales_reps
+  - name: SILVER_SALES_REPS
     description: "cleaned sales reps data"
     columns:
       - name: region

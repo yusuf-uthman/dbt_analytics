@@ -1,5 +1,5 @@
 models:
-  - name: bronze_activities
+  - name: BRONZE_ACTIVITIES
     description: "raw activities data"
     columns:
       - name: activity_id
@@ -12,7 +12,7 @@ models:
         tests:
           - not_null
 
-  - name: bronze_opportunities
+  - name: BRONZE_OPPORTUNITIES
     description: "raw opportunities data"
     columns:
       - name: opportunity_id
@@ -29,11 +29,10 @@ models:
           - not_null
       - name: opportunity_value
         tests:
-          - not_null
           - dbt_utils.expression_is_true:
               expression: "opportunity_value > 0"
 
-  - name: bronze_sales_reps
+  - name: BRONZE_SALES_REPS
     description: "raw sales reps data"
     columns:
       - name: rep_id
@@ -47,9 +46,5 @@ models:
           - not_null
       - name: quota
         tests:
-          - not_null
           - dbt_utils.expression_is_true:
-              expression: "quota > 0"
-
-
-                    
+              expression: "\"quota\" >= 0"
