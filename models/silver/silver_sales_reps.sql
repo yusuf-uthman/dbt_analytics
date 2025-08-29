@@ -1,5 +1,7 @@
 with
     silver_sales_reps as (
+        Select *  from {{ ref("bronze_sales_reps") }}
+    )
         select
             cast(rep_id as int) as REP_ID,  -- Convert ID to int data type
             upper(first_name) AS FIRST_NAME, -- Text fields to uppercase
@@ -16,7 +18,5 @@ with
             UPPER(TO_CHAR(HIRE_DATE, 'Mon')) AS month_name,
             -- Years since staff was hired
             date_part(year, current_date) - extract(year from hire_date) as STAFF_YEAR
-        from {{ ref("bronze_sales_reps") }}
-    )
-    SELECT * 
-    FROM  silver_sales_reps
+        from silver_sales_reps 
+
