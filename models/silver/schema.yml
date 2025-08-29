@@ -12,7 +12,7 @@ models:
               values: ['proposal','meeting','email','demo','call']
 
   - name: silver_opportunities
-    description: "cleaned opportunity data"
+    description: "cleaned opportunities data"
     columns:
       - name: product_type
         tests:

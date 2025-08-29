@@ -4,7 +4,7 @@ models:
     tests: []
 
   - name: gold_opportunities
-    description: "business-ready opportunity data"
+    description: "business-ready opportunities data"
     tests: []
 
   - name: gold_sales_reps
