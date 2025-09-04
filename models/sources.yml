@@ -1,10 +1,9 @@
 version: 2
 sources:
   - name: RAW_GROUP_3_DBT_CLASS
-    database: raw_BUSINESS_data
-    schema: RAW_GROUP_3_DBT_CLASS
+    database: RAW_BUSINESS_DATA
+    schema: GROUP_3_SALES
     tables:
       - name: ACTIVITIES
       - name: OPPORTUNITIES
-      - name: PERFORMANCE
       - name: SALES_REPS
