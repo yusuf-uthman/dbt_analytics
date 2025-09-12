@@ -11,6 +11,11 @@
         cast (rep_id            as int)  as rep_id,
         cast (opportunity_id    as int ) as opportunity_id,
         cast (duration_minutes  as int)  as duration_minutes,
+        --breaking down date---
+        cast(activity_date as date) as activity_date,
+        day(activity_date) as activity_day,
+        month(activity_date) as activity_month,
+        year(activity_date) as activity_year,
         --upercase for text columns---
         upper (outcome)                 as outcome,
         upper (activity_type)           as activity_type,

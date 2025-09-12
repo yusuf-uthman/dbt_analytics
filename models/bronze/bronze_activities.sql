@@ -9,6 +9,7 @@ source as (
         opportunity_id, 
         rep_id, 
         activity_type, 
+        activity_date,
         duration_minutes, 
         outcome, 
         'group_3_sales' as business 
@@ -21,6 +22,7 @@ select
     opportunity_id, 
     rep_id, 
     activity_type, 
+    activity_date,
     duration_minutes, 
     outcome, 
     business 
